@@ -29,7 +29,7 @@ terraform-nginx-ubuntu/
 └── README.md
 ```
 
-![Project structure Initially](SKT3-1.png)
+![Project structure Initially](Screenshots/SKT3-1.png)
 
 ## 4. AWS Resources
 
@@ -69,7 +69,7 @@ Follow the project structure and create the .tf files :
 
 main.tf ( Refer to the file included for the full code )
 
-![main.tf configuration](SKT3-2.png)
+![main.tf configuration](Screenshots/SKT3-2.png)
 
 
 Note: this version of the deployment uses the existing VPC and Security Groups and Internet Gateway , however a version where all resources are seperately configured is also given in alternatemain.tf , refer to this file for the alternate version.
@@ -78,13 +78,13 @@ Note: this version of the deployment uses the existing VPC and Security Groups a
 
 outputs.tf ( Refer to the file included for the full code )
 
-![outputs.tf configuration](SKT3-3.png)
+![outputs.tf configuration](Screenshots/SKT3-3.png)
 
 ---
 
 outputs.tf ( Refer to the file included for the full code )
 
-![variables.tf configuration](SKT3-4.png)
+![variables.tf configuration](Screenshots/SKT3-4.png)
 
 For SSH, replace the example CIDR with your own public IP followed by `/32`.
 
@@ -100,7 +100,7 @@ Open a terminal in the project directory.
 terraform init
 ```
 
-![Terraform init](SKT3-5.png)
+![Terraform init](Screenshots/SKT3-5.png)
 
 ### Validate the configuration
 
@@ -108,7 +108,7 @@ terraform init
 terraform validate
 ```
 
-![Terraform validate](SKT3-6.png)
+![Terraform validate](Screenshots/SKT3-6.png)
 
 ### Review the execution plan
 
@@ -116,10 +116,10 @@ terraform validate
 terraform plan
 ```
 
-![Terraform plan 1](SKT3-7.png)
-![Terraform plan 2](SKT3-8.png)
-![Terraform plan 3](SKT3-9.png)
-![Terraform plan 4](SKT3-10.png)
+![Terraform plan 1](Screenshots/SKT3-7.png)
+![Terraform plan 2](Screenshots/SKT3-8.png)
+![Terraform plan 3](Screenshots/SKT3-9.png)
+![Terraform plan 4](Screenshots/SKT3-10.png)
 
 ### Deploy the infrastructure
 
@@ -127,15 +127,15 @@ terraform plan
 terraform apply
 ```
 
-![Terraform apply](SKT3-11.png)
+![Terraform apply](Screenshots/SKT3-11.png)
 
 Enter `yes` when prompted.
 
-![Terraform apply yes](SKT3-12.png)
+![Terraform apply yes](Screenshots/SKT3-12.png)
 
 Terraform creates the EC2 instance and security group and displays the public IP and website URL.
 
-![Terraform apply results](SKT3-13.png)
+![Terraform apply results](Screenshots/SKT3-13.png)
 
 ---
 
@@ -147,7 +147,7 @@ Expected webpage content:
 
 **Welcome to the Terraform-managed Nginx Server on Ubuntu**
 
-![niginx url working on the browser](SKT3-14.png)
+![niginx url working on the browser](Screenshots/SKT3-14.png)
 
 ---
 
@@ -155,23 +155,23 @@ Expected webpage content:
 
 **EC2 Instance**
 
-![EC2 instance on AWS Console](SKT3-15.png)
+![EC2 instance on AWS Console](Screenshots/SKT3-15.png)
 
 **EC2 Security Tab**
 
-![EC2 instance security tab](SKT3-16.png)
+![EC2 instance security tab](Screenshots/SKT3-16.png)
 
 **EC2 Tags Tab**
 
-![EC2 instance Tags tab](SKT3-17.png)
+![EC2 instance Tags tab](Screenshots/SKT3-17.png)
 
 **Security Group Overview with Inbound & Outboud Rules**
 
-![Security Group Overview 1](SKT3-18.png)
+![Security Group Overview 1](Screenshots/SKT3-18.png)
 
-![Security Group Overview 2](SKT3-19.png)
+![Security Group Overview 2](Screenshots/SKT3-19.png)
 
-![Security Group Overview 3](SKT3-20.png)
+![Security Group Overview 3](Screenshots/SKT3-20.png)
 
 ---
 
@@ -183,17 +183,17 @@ To remove the resources created by this project, run:
 terraform destroy
 ```
 
-![Terraform Destroy Command](SKT3-21.png)
+![Terraform Destroy Command](Screenshots/SKT3-21.png)
 
 Enter `yes` when prompted.
 
-![Terraform Destroy Command yes](SKT3-22.png)
+![Terraform Destroy Command yes](Screenshots/SKT3-22.png)
 
 Verify that Terraform reports that the resources were destroyed.
 
-![Terraform Destroy Command Results 1](SKT3-23.png)
+![Terraform Destroy Command Results 1](Screenshots/SKT3-23.png)
 
-![Terraform Destroy Command Results 2](SKT3-24.png)
+![Terraform Destroy Command Results 2](Screenshots/SKT3-24.png)
 
 ---
 
@@ -202,7 +202,7 @@ Verify that Terraform reports that the resources were destroyed.
 In this deployment, we use gitignore to make sure that some of the terraform file containing critical credentials are not included in the git uploads.
 This is followed as per best security practices.
 
-![Final Folder Structure](SKT3-25.png)
+![Final Folder Structure](Screenshots/SKT3-25.png)
 
 ---
 
